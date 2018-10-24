@@ -1,13 +1,12 @@
 Customers from GP to MercuryGate
 ================================
 
-We have a limited public API that is available for you to get data out of the site.
-This document covers only part of the API provided. We have plans to create a read/write API, so that you can easily automate interactions with your project.
 
 .. warning::
 
-    This API is **deprecated** but will be maintained through at least January 2019.
-    Please connect with :doc:`/api/v2`.
+    This documentation is kept up to date to the best of our ability if you see something that is now
+    outdated please let the Integration team know so they can update the documentation.
+
 
 
 A basic API client using slumber
