@@ -10,3 +10,4 @@ Cash Receipts from GP to MercuryGate
 
 Overview
 --------
+This integration sends the cash receipts from GP to MercuryGate on a set schedule. 
