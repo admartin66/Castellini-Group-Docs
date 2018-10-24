@@ -19,4 +19,4 @@ This section of the documentation details the integrations that are currently at
 .. toctree::
     :maxdepth: 3
 
-    v1
+    customers
