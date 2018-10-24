@@ -1,6 +1,5 @@
-Invoices from MercuryGate to GP
+Cash Receipts from GP to MercuryGate
 ================================
-
 
 
 .. warning::
