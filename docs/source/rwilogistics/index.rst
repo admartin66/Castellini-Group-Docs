@@ -20,3 +20,4 @@ This section of the documentation details the integrations that are currently at
     :maxdepth: 3
 
     customers
+    invoices
