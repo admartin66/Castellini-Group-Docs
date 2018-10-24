@@ -21,3 +21,4 @@ This section of the documentation details the integrations that are currently at
 
     customers
     invoices
+    cash
