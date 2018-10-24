@@ -24,9 +24,9 @@ copyright = '2018, Alex Martin'
 author = 'Alex Martin'
 
 # The short X.Y version
-version = ''
+version = '0.1'
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = '0.1.0'
 
 
 # -- General configuration ---------------------------------------------------
