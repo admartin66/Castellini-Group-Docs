@@ -12,10 +12,69 @@ Customers from GP to MercuryGate
 Overview
 --------
 
-The customer create process starts in GP and sends that information to MercuryGate.
+The customer create process starts in GP and sends that information to MercuryGate on a five minute interval.
 
 
   .. image:: images/CustomerMaintGP.png
+
+
+.. sourcecode:: xml
+<Enterprise name="3 SIGMA" type="Customer" parentName="RWI Logistics Customers" active="true" action="UpdateOrAdd">
+    <MultiNational>false</MultiNational>
+    <Description/>
+    <DisplayNotes/>
+    <CustomerAcctNum>3SITRO</CustomerAcctNum>
+    <ReferenceNumbers>
+      <ReferenceNumber type="Sales Rep">KMills</ReferenceNumber>
+      <ReferenceNumber type="Payment Terms">UNKNOWN</ReferenceNumber>
+      <ReferenceNumber type="Division">205</ReferenceNumber>
+    </ReferenceNumbers>
+    <FederalEIN/>
+    <DUNS/>
+    <PrimarySIC>0000</PrimarySIC>
+    <Ranking>1</Ranking>
+    <Credit checkOnShipmentDuplicate="true" limit="17000" cashOnly="false"/>
+    <Visibility login="true" quote="true"/>
+    <EnterpriseRoles/>
+    <ProofOfDelivery type="carrier" required="false"/>
+    <ProofOfDelivery type="customer" required="false"/>
+    <Locations ownEntName="">
+      <Address isActive="true" type="BILL TO" isResidential="false" isPrimary="true">
+        <AppointmentTime type="earliest">12:01 AM</AppointmentTime>
+        <AppointmentTime type="latest">11:59 PM</AppointmentTime>
+        <ReferenceNumbers/>
+        <LocationCode>3SITRO</LocationCode>
+        <Alias/>
+        <Name>3 SIGMA</Name>
+        <AddrLine1>1985 W STANFIELD RD</AddrLine1>
+        <AddrLine2/>
+        <City>Troy</City>
+        <StateProvince>OH</StateProvince>
+        <PostalCode>45373</PostalCode>
+        <CountryCode>USA</CountryCode>
+        <TimeZone/>
+        <Services/>
+        <Contacts>
+          <Contact type="Administrator">
+            <Name>TBA</Name>
+            <ContactMethods>
+              <ContactMethod sequenceNum="1" type="Phone">9374403400</ContactMethod>
+              <ContactMethod sequenceNum="2" type="Fax">8002910895</ContactMethod>
+              <ContactMethod sequenceNum="3" type="Email"></ContactMethod>
+            </ContactMethods>
+          </Contact>
+        </Contacts>
+        <Comments/>
+      </Address>
+      </Locations>
+   </Enterprise>
+
+   
+
+
+
+
+
 
 
 You can use `Slumber <http://slumber.readthedocs.io/>`_ to build basic API wrappers in python. Here is a simple example of using slumber to interact with the RTD API::
