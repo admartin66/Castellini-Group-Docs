@@ -14,6 +14,7 @@ Overview
 
 The customer create process starts in GP and sends that information to MercuryGate.
 
+
   .. image:: images/CustomerMaintGP.png
 
 
