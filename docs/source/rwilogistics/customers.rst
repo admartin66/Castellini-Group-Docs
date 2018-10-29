@@ -86,7 +86,8 @@ XML Example
 
 
 
-You can use `Slumber <http://slumber.readthedocs.io/>`_ to build basic API wrappers in python. Here is a simple example of using slumber to interact with the RTD API::
+You can use `Slumber <http://slumber.readthedocs.io/>`_ to build basic API wrappers in python. Here is a simple example of using slumber to interact with the
+RTD API::
 
     from __future__ import print_function
     import slumber
