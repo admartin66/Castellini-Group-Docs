@@ -20,7 +20,8 @@ The customer create process starts in GP and sends that information to MercuryGa
 XML Example
 -----------
 
-.. code:: XML
+.. code:: `XML`
+
 
 
    <Enterprise name="3 SIGMA" type="Customer" parentName="RWI Logistics Customers" active="true" action="UpdateOrAdd">
