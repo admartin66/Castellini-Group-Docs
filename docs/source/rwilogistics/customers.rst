@@ -9,8 +9,12 @@ Customers from GP to MercuryGate
 
 
 
-A basic API client using slumber
---------------------------------
+Overview
+--------
+
+The customer create process starts in GP and sends that information to MercuryGate.
+.. .. image:: CustomerMaintGP.png
+
 
 You can use `Slumber <http://slumber.readthedocs.io/>`_ to build basic API wrappers in python. Here is a simple example of using slumber to interact with the RTD API::
 
