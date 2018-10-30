@@ -41,6 +41,7 @@ release = '0.1.0'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinxcontrib.httpdomain',
+    'sphinx.ext.autodoc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
