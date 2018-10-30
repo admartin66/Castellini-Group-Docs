@@ -128,7 +128,7 @@ Feel free to use cURL and python to look at formatted json examples. You can als
 Doc Search
 ----------
 
-  .. http:get:: /api/v1/
+.. http:get:: /api/v1/
 
     :string project: **Required**. The slug of a project.
     :string version: **Required**. The slug of the version for this project.
