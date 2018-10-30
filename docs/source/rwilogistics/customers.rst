@@ -15,11 +15,14 @@ Overview
 The customer create process starts in GP and sends that information to MercuryGate on a five minute interval. Once a customer is created or updated
 in GP it will be sent to MercuryGate utilizing the enterprise XML schema from MercuryGate.
 
+GP 
+---
+
 
   .. image:: images/CustomerMaintGP.png
 
-XML Example
------------
+Enterprise XML Example
+----------------------
 
 .. code-block:: XML
 
