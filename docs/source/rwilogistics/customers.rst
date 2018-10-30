@@ -76,20 +76,6 @@ XML Example
 
 
 
-HTTP Example
-------------
-
-.. http:get:: /api/v2/test/
-
-
-    :string project: **Required**. The slug of a project.
-    :string version: **Required**. The slug of the version for this project.
-    :string q: **Required**. The search query
-
-
-
-
-
 
 
 
@@ -142,7 +128,7 @@ Feel free to use cURL and python to look at formatted json examples. You can als
 Doc Search
 ----------
 
-.. http:get:: /api/v2/docsearch/
+.. https:get:: /api/v2/docsearch/
 
     :string project: **Required**. The slug of a project.
     :string version: **Required**. The slug of the version for this project.
