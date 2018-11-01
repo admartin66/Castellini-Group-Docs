@@ -15,10 +15,10 @@ Overview
 The customer create process starts in GP and sends that information to MercuryGate on a five minute interval. Once a customer is created or updated
 in GP it will be sent to MercuryGate utilizing the enterprise XML schema from MercuryGate.
 
-GP 
+GP
 ---
 
-
+Once a customer in created or updated in GP it will be added to the customeradd or customerupdated table in the DynCustom database. 
   .. image:: images/CustomerMaintGP.png
 
 Enterprise XML Example
