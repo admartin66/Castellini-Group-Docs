@@ -18,7 +18,8 @@ in GP it will be sent to MercuryGate utilizing the enterprise XML schema from Me
 GP
 ---
 
-Once a customer in created or updated in GP it will be added to the customeradd or customerupdated table in the DynCustom database. 
+Once a customer in created or updated in GP it will be added to the "customeradd" or customerupdated table in the DynCustom database. All records in that
+table are flagged using the field "Sent to GP", a blank means that record has not been sent to GP 
   .. image:: images/CustomerMaintGP.png
 
 Enterprise XML Example
