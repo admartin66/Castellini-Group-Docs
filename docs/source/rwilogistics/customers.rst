@@ -29,6 +29,7 @@ table are flagged using the field **"Sent to GP"**, a blank means that record ha
 
 **CustomerAdded Table**
 
+
 +--------------------+--------------+----------------+
 |**Field Name**      |**Field Type**|**Field Length**|
 +--------------------+--------------+----------------+
