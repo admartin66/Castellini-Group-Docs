@@ -25,21 +25,21 @@ Once a customer in created or updated in GP it will be added to the "customeradd
 table are flagged using the field **"Sent to GP"**, a blank means that record has not been sent to GP
   .. image:: images/CustomerMaintGP.png
 
-+--------------------+----------+------------+
-|Field Name          |Field Type|Field Length|
-+--------------------+----------+------------+
-|CustomerIdCreated   |Varchar   |31          |
-+--------------------+----------+------------+
-|CustomerDB          |Varchar   |20          |
-+--------------------+----------+------------+
-|CustomerIdDexRow    |Int       |            |
-+--------------------+----------+------------+
-|DateAndTimeModified |Datetime  |            |
-+--------------------+----------+------------+
-|UniqueGuid          |UniqueID  |            |
-+--------------------+----------+------------+
-|SentToMG            |bit       |            |
-+--------------------+----------+------------+
++--------------------+--------------+----------------+
+|**Field Name**      |**Field Type**|**Field Length**|
++--------------------+--------------+----------------+
+|CustomerIdCreated   |Varchar       |31              |
++--------------------+--------------+----------------+
+|CustomerDB          |Varchar       |20              |
++--------------------+--------------+----------------+
+|CustomerIdDexRow    |Int           |                |
++--------------------+--------------+----------------+
+|DateAndTimeModified |Datetime      |                |
++--------------------+--------------+----------------+
+|UniqueGuid          |UniqueID      |                |
++--------------------+--------------+----------------+
+|SentToMG            |bit           |                |
++--------------------+--------------+----------------+
 
 MercuryGate
 -----------
