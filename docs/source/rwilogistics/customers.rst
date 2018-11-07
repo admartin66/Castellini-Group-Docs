@@ -15,17 +15,27 @@ Overview
 The customer create process starts in GP and sends that information to MercuryGate on a five minute interval. Once a customer is created or updated
 in GP it will be sent to MercuryGate utilizing the enterprise XML schema from MercuryGate.
 
+Process Flow
+------------
+The image below shows at a high level how new customers will flow between GP and MercuryGate.
+  .. image:: images/CustomerCreateDatabase.svg
+
+
 GP
 ---
 
 Once a customer in created or updated in GP it will be added to the "customeradd" or customerupdated table in the DynCustom database. All records in that
-table are flagged using the field **"Sent to GP"**, a blank means that record has not been sent to GP 
+table are flagged using the field **"Sent to GP"**, a blank means that record has not been sent to GP
   .. image:: images/CustomerMaintGP.png
 
-Enterprise XML Example
-----------------------
 
-.. code-block:: XML
+MercuryGate
+-----------
+
+Enterprise XML Example
+~~~~~~~~~~~~~~~~~~~~~~
+
+  .. code-block:: XML
 
 
     <Enterprise name="3 SIGMA" type="Customer" parentName="RWI Logistics Customers" active="true" action="UpdateOrAdd">
