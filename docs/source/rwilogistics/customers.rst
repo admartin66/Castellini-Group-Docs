@@ -26,7 +26,9 @@ table are flagged using the field **"Sent to GP"**, a blank means that record ha
   .. image:: images/CustomerMaintGP.png
 
 
-
+DynCustom
+~~~~~~~~~
+On the GP server we have a custom database designed for staging information; for the customer integration it has two tables
 **CustomerAdded Table**
 
 
@@ -45,6 +47,15 @@ table are flagged using the field **"Sent to GP"**, a blank means that record ha
 +--------------------+--------------+----------------+
 |SentToMG            |bit           |                |
 +--------------------+--------------+----------------+
+
+
++--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
+|CustomerIdCreated   |CustomerDB    |CustomerIdDexRow|DateAndTimeModified    |UniqueID                            |SentToMG|
++--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
+|DAWNTMS             |RWI           |2544            |2018-11-07 14:07:42.193|09BF37F1-CEE4-4142-818D-865BF1B3D643|1       |
++--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
+
+
 
 MercuryGate
 -----------
