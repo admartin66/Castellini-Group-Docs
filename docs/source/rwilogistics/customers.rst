@@ -18,6 +18,7 @@ in GP it will be sent to MercuryGate utilizing the enterprise XML schema from Me
 Process Flow
 ------------
 The image below shows at a high level how new customers will flow between GP and MercuryGate.
+
   .. image:: images/CustomerCreateDatabase.svg
 
 
