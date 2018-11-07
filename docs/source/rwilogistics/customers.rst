@@ -25,8 +25,8 @@ Once a customer in created or updated in GP it will be added to the "customeradd
 table are flagged using the field **"Sent to GP"**, a blank means that record has not been sent to GP
   .. image:: images/CustomerMaintGP.png
 
-  ::
-     CustomerAdded
+
+.. http:Table:: CustomerAdded
 
 +--------------------+--------------+----------------+
 |**Field Name**      |**Field Type**|**Field Length**|
