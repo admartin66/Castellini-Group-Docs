@@ -28,7 +28,10 @@ table are flagged using the field **"Sent to GP"**, a blank means that record ha
 
 DynCustom
 ~~~~~~~~~
+
 On the GP server we have a custom database designed for staging information; for the customer integration it has two tables
+
+
 **CustomerAdded Table**
 
 
