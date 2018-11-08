@@ -59,6 +59,29 @@ On the GP server we have a custom database designed for staging information; for
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
 
 
+:
+SET @SQL = 'select ''Update'' As Action, a.custnmbr, RTRIM(custname) as custname, custclas, a.cntcprsn, stmtname, shrtname, b.adrscode as AddressCode,
+a.taxschid, b.address1, b.address2, b.address3, b.city, b.[state], b.zip, b.country, b.phone1, b.fax,
+PRBTADCD, PRSTADCD, PRSTADCD, a.SLPRSNID, PYMTRMID, CRLMTTYP, CASE CRLMTTYP WHEN 1 THEN 1000000 ELSE dbo.GetAvailableCreditForEnterpriseCustomer(a.CUSTNMBR) END AS CRLMTAMT, CRLMTPER,
+TXRGNNUM, a.SALSTERR, getdate()
+from ' + rtrim(@Database) + '..rm00101 a
+inner join ' + rtrim(@Database) + '..rm00102 b
+ON a.CUSTNMBR = b.CUSTNMBR AND a.PRBTADCD = b.ADRSCODE WHERE a.CUSTNMBR IN
+(SELECT distinct CustomerIdModified FROM CustomersModified WHERE SentToMG = 0)
+
+UNION
+
+select ''Create'' As Action, a.custnmbr, RTRIM(custname) as custname, custclas, a.cntcprsn, stmtname, shrtname, b.adrscode as AddressCode,
+a.taxschid, b.address1, b.address2, b.address3, b.city, b.[state], b.zip, b.country, b.phone1, b.fax,
+PRBTADCD, PRSTADCD, PRSTADCD, a.SLPRSNID, PYMTRMID, CRLMTTYP, CASE CRLMTTYP WHEN 1 THEN 1000000 ELSE dbo.GetAvailableCreditForEnterpriseCustomer(a.CUSTNMBR) END AS CRLMTAMT, CRLMTPER,
+TXRGNNUM, a.SALSTERR, getdate()
+from ' + rtrim(@Database) + '..rm00101 a
+inner join ' + rtrim(@Database) + '..rm00102 b
+ON a.CUSTNMBR = b.CUSTNMBR AND a.PRBTADCD = b.ADRSCODE WHERE a.CUSTNMBR IN
+(SELECT distinct CustomerIdCreated FROM CustomersAdded WHERE SentToMG = 0)
+ORDER BY Action'
+
+
 
 MercuryGate
 -----------
