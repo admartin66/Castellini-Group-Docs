@@ -33,7 +33,7 @@ On the GP server we have a custom database designed for staging information; for
 
 
 CustomerAdded Table
-*******************
+```````````````````
 
 
 +--------------------+--------------+----------------+
@@ -61,7 +61,7 @@ CustomerAdded Table
 
 
 Stored Procedure
-****************
+````````````````
 
 
 .. code-block:: SQL
