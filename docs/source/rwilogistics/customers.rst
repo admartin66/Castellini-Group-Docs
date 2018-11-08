@@ -32,7 +32,8 @@ DynCustom
 On the GP server we have a custom database designed for staging information; for the customer integration it has two tables
 
 
-**CustomerAdded Table**
+CustomerAdded Table
+*******************
 
 
 +--------------------+--------------+----------------+
@@ -59,7 +60,8 @@ On the GP server we have a custom database designed for staging information; for
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
 
 
-**Stored Procedure**
+Stored Procedure
+****************
 
 .. code-block:: SQL
 
