@@ -59,7 +59,7 @@ On the GP server we have a custom database designed for staging information; for
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
 
 
-.. code-block:: SQL
+**Stored Procedure**::
   SET @SQL = 'select ''Update'' As Action, a.custnmbr, RTRIM(custname) as custname, custclas, a.cntcprsn, stmtname, shrtname, b.adrscode as AddressCode,
   a.taxschid, b.address1, b.address2, b.address3, b.city, b.[state], b.zip, b.country, b.phone1, b.fax,
   PRBTADCD, PRSTADCD, PRSTADCD, a.SLPRSNID, PYMTRMID, CRLMTTYP, CASE CRLMTTYP WHEN 1 THEN 1000000 ELSE dbo.GetAvailableCreditForEnterpriseCustomer(a.CUSTNMBR) END AS CRLMTAMT, CRLMTPER,
