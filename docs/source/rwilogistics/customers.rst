@@ -29,7 +29,8 @@ table are flagged using the field **"Sent to GP"**, a blank means that record ha
 DynCustom
 ~~~~~~~~~
 
-On the GP server we have a custom database designed for staging information; for the customer integration it has two tables
+On the GP server we have a custom database designed for staging information; for the customer integration it has two tables, Customer Added and
+Customer Updated.
 
 
 CustomerAdded Table
