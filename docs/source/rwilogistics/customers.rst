@@ -58,6 +58,7 @@ the customer master to populate customeradd or customerupdated.
 +--------------------+--------------+----------------+
 
 **Example record from the customer added table**
+
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
 |CustomerIdCreated   |CustomerDB    |CustomerIdDexRow|DateAndTimeModified    |UniqueID                            |SentToMG|
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
