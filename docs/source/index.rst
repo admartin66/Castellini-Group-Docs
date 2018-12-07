@@ -1,5 +1,5 @@
-Read the Docs: Documentation Simplified
-=======================================
+Castellini Group of Companies Documentation
+===========================================
 
 `Read the Docs`_ simplifies software documentation
 by automating building, versioning, and hosting of your docs for you.
@@ -45,7 +45,7 @@ to help you create fantastic documentation for your project.
 .. _user-docs:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :caption: Castellini Companies
 
    rwilogistics/index
