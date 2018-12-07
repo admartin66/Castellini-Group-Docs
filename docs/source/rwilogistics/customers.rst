@@ -5,7 +5,7 @@ Customers from GP to MercuryGate
 .. warning::
 
     This documentation is kept up to date to the best of our ability if you see something that is now
-    outdated please let the Integration team know so they can update the documentation.
+    outdated please let the integration team know so they can update the documentation.
 
 
 
@@ -21,8 +21,8 @@ in GP it will be sent to MercuryGate utilizing the enterprise XML schema from Me
 GP
 ---
 
-Once a customer in created or updated in GP it will be added to the "customeradd" or customerupdated table in the DynCustom database. All records in that
-table are flagged using the field **"Sent to GP"**, a blank means that record has not been sent to GP
+Once a customer in created or updated in GP it will be added to the customeradd or customerupdated table in the DynCustom database. All records in that
+table are flagged using the field **"Sent to MG"**, a blank means that record has not been sent to MercuryGate.
   .. image:: images/CustomerMaintGP.png
 
 
@@ -35,6 +35,10 @@ Customer Updated.
 
 CustomerAdded Table
 ```````````````````
+
+The customeradd or customerupdated are populated by a trigger that is on the customer master table (RM00101) in the GP database. The trigger will add
+the DEX_ROW_ID to customeradd or customerupdated. Customeradd and customerupdated also have a trigger that will then take that DEX_ROW_ID then get the required fields from
+the customer master to populate customeradd or customerupdated. 
 
 
 +--------------------+--------------+----------------+
@@ -53,7 +57,7 @@ CustomerAdded Table
 |SentToMG            |bit           |                |
 +--------------------+--------------+----------------+
 
-
+**Example record from the customer added table**
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
 |CustomerIdCreated   |CustomerDB    |CustomerIdDexRow|DateAndTimeModified    |UniqueID                            |SentToMG|
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
@@ -61,33 +65,6 @@ CustomerAdded Table
 +--------------------+--------------+----------------+-----------------------+------------------------------------+--------+
 
 
-Stored Procedure
-````````````````
-
-
-.. code-block:: SQL
-
-
-  SET @SQL = 'select ''Update'' As Action, a.custnmbr, RTRIM(custname) as custname, custclas, a.cntcprsn, stmtname, shrtname, b.adrscode as AddressCode,
-  a.taxschid, b.address1, b.address2, b.address3, b.city, b.[state], b.zip, b.country, b.phone1, b.fax,
-  PRBTADCD, PRSTADCD, PRSTADCD, a.SLPRSNID, PYMTRMID, CRLMTTYP, CASE CRLMTTYP WHEN 1 THEN 1000000 ELSE dbo.GetAvailableCreditForEnterpriseCustomer(a.CUSTNMBR) END AS CRLMTAMT, CRLMTPER,
-  TXRGNNUM, a.SALSTERR, getdate()
-  from ' + rtrim(@Database) + '..rm00101 a
-  inner join ' + rtrim(@Database) + '..rm00102 b
-  ON a.CUSTNMBR = b.CUSTNMBR AND a.PRBTADCD = b.ADRSCODE WHERE a.CUSTNMBR IN
-  (SELECT distinct CustomerIdModified FROM CustomersModified WHERE SentToMG = 0)
-
-  UNION
-
-  select ''Create'' As Action, a.custnmbr, RTRIM(custname) as custname, custclas, a.cntcprsn, stmtname, shrtname, b.adrscode as AddressCode,
-  a.taxschid, b.address1, b.address2, b.address3, b.city, b.[state], b.zip, b.country, b.phone1, b.fax,
-  PRBTADCD, PRSTADCD, PRSTADCD, a.SLPRSNID, PYMTRMID, CRLMTTYP, CASE CRLMTTYP WHEN 1 THEN 1000000 ELSE dbo.GetAvailableCreditForEnterpriseCustomer(a.CUSTNMBR) END AS CRLMTAMT, CRLMTPER,
-  TXRGNNUM, a.SALSTERR, getdate()
-  from ' + rtrim(@Database) + '..rm00101 a
-  inner join ' + rtrim(@Database) + '..rm00102 b
-  ON a.CUSTNMBR = b.CUSTNMBR AND a.PRBTADCD = b.ADRSCODE WHERE a.CUSTNMBR IN
-  (SELECT distinct CustomerIdCreated FROM CustomersAdded WHERE SentToMG = 0)
-  ORDER BY Action'
 
 
 
