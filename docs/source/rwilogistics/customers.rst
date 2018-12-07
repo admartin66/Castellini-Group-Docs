@@ -34,11 +34,11 @@ Customer Updated.
 
 
 CustomerAdded Table
-```````````````````
+~~~~~~~~~~~~~~~~~~~
 
 The customeradd or customerupdated are populated by a trigger that is on the customer master table (RM00101) in the GP database. The trigger will add
 the DEX_ROW_ID to customeradd or customerupdated. Customeradd and customerupdated also have a trigger that will then take that DEX_ROW_ID then get the required fields from
-the customer master to populate customeradd or customerupdated. 
+the customer master to populate customeradd or customerupdated.
 
 
 +--------------------+--------------+----------------+
